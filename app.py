@@ -6,12 +6,13 @@ import plotly.express as px
 df = pd.read_csv('cars_workshop.csv')
 df = df.drop(df.columns[0], axis=1)
 
+st.header('Hello welcome to my website')
 st.header('Market of used cars.Original data')
 st.write('Filter the data below to see the ads by manufacturer')
 
 manufacturer_choise = df['manufacturer_name'].unique()
 
-selected_manu = st.selectbox('Select an manufactirar',manufacturer_choise)
+selected_manu = st.selectbox('Select an manufacturar',manufacturer_choise)
 
 
 min_year, max_year = int(df['year_produced'].min()),int(df['year_produced'].max())
